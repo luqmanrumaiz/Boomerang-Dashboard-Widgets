@@ -8,17 +8,14 @@
 
 .div1 {
   grid-area: 1 / 1 / 2 / 2;
-  background-color: lightcyan;
 }
 .div2 {
   grid-area: 1 / 2 / 2 / 3;
-  background-color: lightgoldenrodyellow;
 }
 .div3 {
   grid-area: 1 / 3 / 2 / 4;
-  background-color: lightsteelblue;
 }
 .div4 {
   grid-area: 2 / 1 / 3 / 4;
-  background-color: aquamarine;
+  height: 200px;
 }
