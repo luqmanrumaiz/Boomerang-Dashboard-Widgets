@@ -7,61 +7,60 @@ const data = [
     Age: "0-18",
     Female: 0,
     Male: 1,
+    Other: 0,
   },
   {
     Age: "19-24",
     Female: 3,
     Male: 7,
+    Other: 0,
   },
   {
     Age: "25-29",
     Female: 3,
     Male: 3,
+    Other: 0,
   },
   {
     Age: "30-34",
     Female: 10,
-    Male: 25,
+    Male: 15,
+    Other: 1,
   },
   {
     Age: "35-39",
     Female: 7,
     Male: 30,
+    Other: 0,
   },
   {
     Age: "40-44",
     Female: 5,
     Male: 14,
+    Other: 0,
   },
   {
     Age: "45-49",
     Female: 2,
     Male: 7,
+    Other: 0,
   },
   {
     Age: "50-54",
     Female: 1,
     Male: 1,
+    Other: 0,
   },
   {
-    Age: "55-59",
+    Age: "55+",
     Female: 0,
     Male: 0,
-  },
-  {
-    Age: "60-64",
-    Female: 0,
-    Male: 0,
-  },
-  {
-    Age: "65-100",
-    Female: 0,
-    Male: 0,
+    Other: 0,
   },
 ];
 
 const config = {
-  keys: ["Female", "Male"],
+  keys: ["Female", "Male", "Other"],
 
   margin: {
     top: 50,
@@ -69,6 +68,26 @@ const config = {
     bottom: 50,
     left: 60,
   },
+
+  defs: [
+    {
+      id: "lines",
+      type: "patternLines",
+      background: "inherit",
+      color: "#f1bc73",
+      rotation: -45,
+      lineWidth: 5,
+      spacing: 10,
+    },
+  ],
+  fill: [
+    {
+      match: {
+        id: "Other",
+      },
+      id: "lines",
+    },
+  ],
 
   axisBottom: {
     tickSize: 5,
@@ -122,7 +141,10 @@ export default function AgeGroupChart() {
       indexBy="Age"
       margin={config.margin}
       padding={0.3}
-      colors={["#ff705e", "#2581bb"]}
+      colors={["#ff705e", "#2581bb", "#73c9c0"]}
+      colorBy="id"
+      defs={config.defs}
+      fill={config.fill}
       theme={theme}
       defs={config.defs}
       fill={config.fill}
