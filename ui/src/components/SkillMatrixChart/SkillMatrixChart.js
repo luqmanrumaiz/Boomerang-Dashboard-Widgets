@@ -29,7 +29,7 @@ const chartData = () => {
 
 const theme = { fontFamily: "Poppins" };
 
-export default function TurnoverChart() {
+export default function SkillMatrixChart() {
   return (
     <ResponsiveBar
       data={chartData()}
@@ -52,6 +52,13 @@ export default function TurnoverChart() {
         legend: "No of Employees",
         legendPosition: "middle",
         legendOffset: 32,
+      }}
+      axisLeft={{
+        tickSize: 5,
+        tickRotation: 0,
+        legend: "Department",
+        legendPosition: "middle",
+        legendOffset: -150,
       }}
       labelSkipWidth={12}
       labelSkipHeight={12}
