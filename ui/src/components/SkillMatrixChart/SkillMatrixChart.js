@@ -21,13 +21,15 @@ const chartData = () =>
   return arr;
 }
 
+const theme = {fontFamily:"Poppins"};
+
 export default function TurnoverChart() {
   return (
     <ResponsiveBar
         data={chartData()}
         keys={[ 'Male', 'Female']}
         indexBy="Department"
-        margin={{ right: 130, bottom: 50, left: 150 }}
+        margin={{ right: 130, bottom: 50, left: 170}}
         padding={0.2}
         groupMode="grouped"
         layout="horizontal"
@@ -35,7 +37,7 @@ export default function TurnoverChart() {
         indexScale={{ type: 'band', round: true }}
         valueFormat={{ format: '', enabled: false }}
         colors={['#4DB3B3',"#E64A45"]}
-        
+        theme = {theme}
 
         axisTop={null}
         axisRight={null}

@@ -65,6 +65,8 @@ const data = [
   },
 ];
 
+const theme = {fontFamily:"Poppins"};
+
 // make sure parent container have a defined height when using
 // responsive component, otherwise height will be 0 and
 // no chart will be rendered.
@@ -83,6 +85,7 @@ export default function TurnoverChart() {
       indexScale={{ type: "band", round: true }}
       valueFormat={{ format: "", enabled: false }}
       colors={{ scheme: "set2" }}
+      theme = {theme}
       borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
       axisTop={null}
       axisRight={null}
