@@ -7,17 +7,17 @@ import TurnoverChart from "./components/TurnoverChart/TurnoverChart";
 
 export default function App() {
   return (
-    <div className="parent">
-      <div className="div1">
+    <div className="dashboard">
+      <div className="age">
         <AgeGroupChart />
       </div>
-      <div className="div2">
-        <HeadCountChart />
-      </div>
-      <div className="div3">
+      <div className="skill">
         <SkillMatrixChart />
       </div>
-      <div className="div4">
+      <div className="headCount">
+        <HeadCountChart />
+      </div>
+      <div className="turnover">
         <TurnoverChart />
       </div>
     </div>
